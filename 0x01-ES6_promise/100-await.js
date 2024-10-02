@@ -1,12 +1,12 @@
 // Use async/await to handle multiple promises.
-import { uploadPhoto, createUser } from "./utils";
+import { uploadPhoto, createUser } from './utils';
 
 export default async function asyncUploadUser() {
   try {
-    const photo = await uploadPhoto("photo.jpg");
+    const photo = await uploadPhoto('photo.jpg');
     const user = await createUser();
     return { photo, user };
-  } catch {
+  } catch (error) {
     return { photo: null, user: null };
   }
 }

@@ -5,7 +5,7 @@ export default class Car {
     this._color = color;
   }
 
-  cloneCar() {
+  static cloneCar() {
     return new Car();
   }
 }
